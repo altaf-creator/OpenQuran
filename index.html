@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>OpenQuran - Redirecting</title>
+</head>
+
+<body>
+    <a href="src/">Click here if page doesn't load</a>
+
+    <script>
+        try {
+            process.versions['electron'];
+            window.location.href = "src/index.html";
+        } catch {
+            window.location.href = "src/";
+        }
+    </script>
+</body>
+
+</html>
