@@ -1,0 +1,12 @@
+{
+  "name": "OpenQuran",
+  "display": "standalone",
+  "theme_color": "#F3F3F3",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "type": "image/png",
+      "sizes": "1080x1080"
+    }
+  ]
+}
