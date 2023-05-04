@@ -1,12 +1,11 @@
 const staticQuran = "quran-all";
 const assets = [
-    "/",
     "/index.html",
     "/src/index.html",
     "/src/sura.html",
     "/src/attribution.html",
     "/src/styles/style.css",
-    "/src/styles/css/all.css",
+    "/src/styles/css/fontawesome.css",
     "/src/styles/css/brands.css",
     "/src/styles/css/solid.css",
     "/src/styles/webfonts/fa-brands-400.ttf",
