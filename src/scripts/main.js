@@ -17,9 +17,9 @@ const assets = [
     "../src/data/id.indonesian.xml",
     "../src/data/quran-data.xml",
     "../src/data/quran-uthmani.xml",
-    "main.js",
-    "quran.js",
-    "sura-list.js",
+    "../src/scripts/main.js",
+    "../src/scripts/quran.js",
+    "../src/scripts/sura-list.js",
 ];
 
 function urlExists(url) {
@@ -29,7 +29,7 @@ function urlExists(url) {
 
     if (http.status != 200)
         console.log(url)
-        
+
     return http.status != 404;
 }
 if ("serviceWorker" in navigator) {
