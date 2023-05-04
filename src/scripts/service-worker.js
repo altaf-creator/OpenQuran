@@ -23,10 +23,22 @@ const assets = [
     "../src/scripts/sura-list.js",
 ];
 
+function urlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    if (http.status != 200)
+        console.log(url)
+    http.send();
+    return http.status != 404;
+}
+
 self.addEventListener("install", installEvent => {
     installEvent.waitUntil(
         caches.open(staticQuran).then(cache => {
             cache.addAll(assets)
+            for (var i = 0; i < assets.length; i++) {
+                urlExists(assets[i]);
+            }
             console.log(assets)
         })
     )
