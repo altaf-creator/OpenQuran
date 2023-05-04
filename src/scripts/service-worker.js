@@ -1,5 +1,6 @@
 const staticQuran = "quran-all";
 const assets = [
+    "/",
     "/index.html",
     "/src/index.html",
     "/src/sura.html",
@@ -21,7 +22,6 @@ const assets = [
     "/src/scripts/quran.js",
     "/src/scripts/sura-list.js",
 ];
-
 self.addEventListener("install", installEvent => {
     installEvent.waitUntil(
         caches.open(staticQuran).then(cache => {
