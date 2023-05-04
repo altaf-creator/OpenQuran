@@ -2,8 +2,7 @@ function urlExists(url) {
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
-    if (http.status != 200)
-        console.log(`${http.status} ${url} `)
+    console.log(`${http.status} ${url} `)
     return http.status != 404;
 }
 

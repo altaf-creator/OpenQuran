@@ -1,12 +1,16 @@
 {
   "name": "OpenQuran",
+  "short_name": "OpenQuran",
+  "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#F3F3F3",
+  "background_color": "#FFFFFF",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "images/favicon.png",
       "type": "image/png",
-      "sizes": "1080x1080"
+      "sizes": "512x512"
     }
   ]
 }
