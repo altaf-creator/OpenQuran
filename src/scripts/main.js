@@ -1,34 +1,31 @@
-
 const assets = [
-    "/",
-    "/sura.html",
-    "/src/index.html",
-    "/src/sura.html",
-    "/src/attribution.html",
-    "/src/styles/style.css",
-    "/src/styles/css/fontawesome.css",
-    "/src/styles/css/brands.css",
-    "/src/styles/css/solid.css",
-    "/src/styles/webfonts/fa-brands-400.ttf",
-    "/src/styles/webfonts/fa-brands-400.woff2",
-    "/src/styles/webfonts/fa-solid-900.ttf",
-    "/src/styles/webfonts/fa-solid-900.woff2",
-    "/src/styles/css/solid.css",
-    "/src/data/en.sahih.xml",
-    "/src/data/id.indonesian.xml",
-    "/src/data/quran-data.xml",
-    "/src/data/quran-uthmani.xml",
-    "/src/scripts/main.js",
-    "/src/scripts/quran.js",
-    "/src/scripts/sura-list.js",
+    "../../",
+    "../../index.html",
+    "../src/index.html",
+    "../src/sura.html",
+    "../src/attribution.html",
+    "../src/styles/style.css",
+    "../src/styles/css/fontawesome.css",
+    "../src/styles/css/brands.css",
+    "../src/styles/css/solid.css",
+    "../src/styles/webfonts/fa-brands-400.ttf",
+    "../src/styles/webfonts/fa-brands-400.woff2",
+    "../src/styles/webfonts/fa-solid-900.ttf",
+    "../src/styles/webfonts/fa-solid-900.woff2",
+    "../src/styles/css/solid.css",
+    "../src/data/en.sahih.xml",
+    "../src/data/id.indonesian.xml",
+    "../src/data/quran-data.xml",
+    "../src/data/quran-uthmani.xml",
+    "main.js",
+    "quran.js",
+    "sura-list.js",
 ];
 
 function urlExists(url) {
-    console.log(url);
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
-    console.log(http.status)
     return http.status != 404;
 }
 if ("serviceWorker" in navigator) {
