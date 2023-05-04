@@ -22,12 +22,11 @@ const assets = [
     "../src/scripts/quran.js",
     "../src/scripts/sura-list.js",
 ];
-
+/*
 self.addEventListener("install", installEvent => {
     installEvent.waitUntil(
         caches.open(staticQuran).then(cache => {
-            for (var i = 0; i < assets.length; i++)
-            {
+            for (var i = 0; i < assets.length; i++) {
                 cache.add(assets[i]);
             }
         })
@@ -41,3 +40,42 @@ self.addEventListener("fetch", fetchEvent => {
         })
     )
 })
+*/
+
+self.addEventListener('install', function (event) {
+    console.log('Service worker installed');
+
+    event.waitUntil(
+        caches.open('staticQuran')
+            .then(function (cache) {
+                console.log('Cache opened');
+                return cache.addAll(assets);
+            })
+            .then(function () {
+                console.log('Assets cached');
+            })
+            .catch(function (error) {
+                console.error('Error caching assets:', error);
+            })
+    );
+});
+
+self.addEventListener('fetch', function (event) {
+    console.log('Fetch event:', event.request.url);
+
+    event.respondWith(
+        caches.match(event.request)
+            .then(function (response) {
+                if (response) {
+                    console.log('Cached response found:', response);
+                    return response;
+                }
+
+                console.log('No cached response found, fetching from network');
+                return fetch(event.request);
+            })
+            .catch(function (error) {
+                console.error('Error fetching from cache:', error);
+            })
+    );
+});
