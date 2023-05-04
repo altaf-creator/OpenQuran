@@ -18,9 +18,9 @@ const assets = [
     "../src/data/id.indonesian.xml",
     "../src/data/quran-data.xml",
     "../src/data/quran-uthmani.xml",
-    "main.js",
-    "quran.js",
-    "sura-list.js",
+    "../src/scripts/main.js",
+    "../src/scripts/quran.js",
+    "../src/scripts/sura-list.js",
 ];
 
 self.addEventListener("install", installEvent => {
