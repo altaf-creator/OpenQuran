@@ -1,7 +1,7 @@
 
 const assets = [
     "/",
-    "/index.html",
+    "/sura.html",
     "/src/index.html",
     "/src/sura.html",
     "/src/attribution.html",
