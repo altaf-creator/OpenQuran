@@ -26,7 +26,10 @@ const assets = [
 self.addEventListener("install", installEvent => {
     installEvent.waitUntil(
         caches.open(staticQuran).then(cache => {
-            cache.addAll(assets)
+            for (var i = 0; i < assets.length; i++)
+            {
+                cache.add(assets[i]);
+            }
         })
     )
 })
@@ -34,7 +37,7 @@ self.addEventListener("install", installEvent => {
 self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
         caches.match(fetchEvent.request).then(res => {
-            return res || fetch(fetchEvent.request)
+            return res || fetch(fetchEvent.request);
         })
     )
 })
