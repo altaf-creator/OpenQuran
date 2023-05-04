@@ -1,5 +1,17 @@
+function urlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    if (http.status != 200)
+        console.log(`${http.status} ${url} `)
+    http.send();
+    return http.status != 404;
+}
+
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
+        for (var i = 0; i < assets.length; i++) {
+            urlExists(assets[i]);
+        }
 
         navigator.serviceWorker
             .register("scripts/service-worker.js")
