@@ -8,13 +8,17 @@ function urlExists(url) {
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
-        for (var i = 0; i < assets.length; i++) {
-            urlExists(assets[i]);
-        }
+        try {
+            process.versions['electron'];
+        } catch {
+            for (var i = 0; i < assets.length; i++) {
+                urlExists(assets[i]);
+            }
 
-        navigator.serviceWorker
-            .register("scripts/service-worker.js")
-            .then(res => console.log("service worker registered"))
-            .catch(err => console.log("service worker not registered", err))
+            navigator.serviceWorker
+                .register("scripts/service-worker.js")
+                .then(res => console.log("service worker registered"))
+                .catch(err => console.log("service worker not registered", err))
+        }
     })
 }

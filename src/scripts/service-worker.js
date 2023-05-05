@@ -32,50 +32,54 @@ self.addEventListener("install", installEvent => {
         })
     )
 })
-
+ 
 self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
         caches.match(fetchEvent.request).then(res => {
             return res || fetch(fetchEvent.request);
         })
-    )
-})
+        )
+    })
 */
 
-self.addEventListener('install', function (event) {
-    console.log('Service worker installed');
+try {
+    process.versions['electron']
+} catch {
+    self.addEventListener('install', function (event) {
+        console.log('Service worker installed');
 
-    event.waitUntil(
-        caches.open('staticQuran')
-            .then(function (cache) {
-                console.log('Cache opened');
-                return cache.addAll(assets);
-            })
-            .then(function () {
-                console.log('Assets cached');
-            })
-            .catch(function (error) {
-                console.error('Error caching assets:', error);
-            })
-    );
-});
+        event.waitUntil(
+            caches.open('staticQuran')
+                .then(function (cache) {
+                    console.log('Cache opened');
+                    return cache.addAll(assets);
+                })
+                .then(function () {
+                    console.log('Assets cached');
+                })
+                .catch(function (error) {
+                    console.error('Error caching assets:', error);
+                })
+        );
+    });
 
-self.addEventListener('fetch', function (event) {
-    console.log('Fetch event:', event.request.url);
+    self.addEventListener('fetch', function (event) {
+        console.log('Fetch event:', event.request.url);
 
-    event.respondWith(
-        caches.match(event.request)
-            .then(function (response) {
-                if (response) {
-                    console.log('Cached response found:', response);
-                    return response;
-                }
+        event.respondWith(
+            caches.match(event.request)
+                .then(function (response) {
+                    if (response) {
+                        console.log('Cached response found:', response);
+                        return response;
+                    }
 
-                console.log('No cached response found, fetching from network');
-                return fetch(event.request);
-            })
-            .catch(function (error) {
-                console.error('Error fetching from cache:', error);
-            })
-    );
-});
+                    console.log('No cached response found, fetching from network');
+                    return fetch(event.request);
+                })
+                .catch(function (error) {
+                    console.error('Error fetching from cache:', error);
+                })
+        );
+    });
+}
