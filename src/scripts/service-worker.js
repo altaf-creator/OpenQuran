@@ -1,3 +1,4 @@
+/* Not working, making load time longer, revisit later.
 const staticQuran = "quran-all";
 const assets = [
     "../../",
@@ -41,7 +42,7 @@ self.addEventListener("fetch", fetchEvent => {
         )
     })
 */
-
+/*
 try {
     process.versions['electron']
 } catch {
@@ -83,3 +84,4 @@ try {
         );
     });
 }
+*/

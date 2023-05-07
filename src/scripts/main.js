@@ -1,3 +1,4 @@
+/* Not working, making load time longer, revisit later.
 function urlExists(url) {
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
@@ -22,3 +23,4 @@ if ("serviceWorker" in navigator) {
         }
     })
 }
+*/
