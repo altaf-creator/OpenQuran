@@ -1,2 +1,2 @@
-# * linguist-vendored
-# *.js linguist-vendored=false
+src/styles/css/* linguist-detectable=false
+src/styles/webfonts/* linguist-detectable=false 
