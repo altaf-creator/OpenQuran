@@ -203,16 +203,53 @@ hr {
     background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.main-sidebar {
+    position: fixed;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+    height: 100%;
+    z-index: 3;
+}
+
+.sidebar-buttons {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 17.5px;
+    display: block;
+    display: grid;
+    box-sizing: border-box;
+    padding: 8px;
+    color: #000;
+    text-decoration: none;
+    transition: all 150ms;
+    margin-top: 12.5px;
+    text-align: center;
+}
+
+.sidebar-buttons:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-buttons:active {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.sidebar-buttons:focus {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 .sidebar {
     position: fixed;
     height: 100%;
-    width: 260px;
+    width: 230px;
     background-color: #F3F3F3;
     z-index: 1;
+    margin-left: 60px;
 }
 
 .main {
-    margin-left: 260px;
+    margin-left: 290px;
     background-color: #FFF;
     border-top-left-radius: 15px;
     z-index: 3;
@@ -298,6 +335,7 @@ hr {
     z-index: 2;
     border-top-right-radius: 10px;
     background-color: #F3F3F3;
+    display: none;
 }
 
 .dropdown-button {
@@ -393,7 +431,7 @@ hr {
 
     .main {
         border-top-left-radius: 0;
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
     #dropdown-alternate {
@@ -405,6 +443,14 @@ hr {
     }
 
     .window-button-container {
+        display: none;
+    }
+
+    .sidebar-links {
+        display: block;
+    }
+
+    .main-sidebar {
         display: none;
     }
 }

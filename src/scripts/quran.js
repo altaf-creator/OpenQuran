@@ -23,22 +23,29 @@ function getUrlVars() {
 
 function quranOnLoad() {
     var a = getUrlVars()["sura"];
-    load(a, tIndex);
+
+    if (a) {
+        load(a, tIndex);
+    } else {
+        load(1, tIndex)
+    }
+
     loadSuraButtons();
 
     try {
         process.versions['electron'];
-        
+
         var windowBtns = document.getElementsByClassName('window-button-container');
-        
+
         for (var i = 0; i < windowBtns.length; i++) {
             windowBtns[i].style.display = 'grid';
         }
-        
+
         document.getElementById('openquran-link').href = 'index.html'
+        document.getElementById('openquran-home').href = 'index.html'
     } catch {
         var windowBtns = document.getElementsByClassName('window-button-container');
-        
+
         for (var i = 0; i < windowBtns.length; i++) {
             windowBtns[i].style.display = 'none';
         }

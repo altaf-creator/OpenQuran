@@ -20,6 +20,8 @@ function load() {
         for (var i = 0; i < windowBtns.length; i++) {
             windowBtns[i].style.display = 'grid';
         }
+
+        document.getElementById('openquran-home').href = 'index.html'
     } catch {
         var windowBtns = document.getElementsByClassName('window-button-container');
 
