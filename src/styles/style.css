@@ -323,7 +323,7 @@ hr {
 }
 
 #scroll-sura {
-    height: calc(100% - 60px - 42px);
+    height: calc(100% - 60px);
 }
 
 .sidebar-links {
