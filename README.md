@@ -20,7 +20,7 @@ OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app.
 ---
 
 ### Download from Releases (Windows)
-1. Download the .zip file [here](https://github.com/altaf-creator/OpenQuran/releases/tag/v1.0.0)
+1. Download the .zip file [here](https://github.com/altaf-creator/OpenQuran/releases/tag/v1.1.0)
 2. Unzip the file
 3. Open the `OpenQuran` shortcut on the unzipped root folder **OR** navigate to `\OpenQuran-win32-x64` then open `OpenQuran.exe`
 
