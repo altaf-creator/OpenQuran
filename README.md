@@ -8,7 +8,7 @@
 OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app. 
 
 ## Features
----
+
 
 - Al-Qur'an
 - Sura List
@@ -17,7 +17,6 @@ OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app.
 	- Indonesia
 
 ## Installation
----
 
 ### Download from Releases (Windows)
 1. Download the .zip file [here](https://github.com/altaf-creator/OpenQuran/releases/tag/v1.1.0)
@@ -37,7 +36,6 @@ OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app.
 3. Click "Add to Homescreen" or "Install App"
 
 ## Screenshots
----
 
 ![screenshot 1](readme-assets/screenshots/1.png)
 ![screenshot 2](readme-assets/screenshots/2.png)
@@ -46,6 +44,6 @@ OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app.
 
 
 ## Credits & Attribution
----
+
 - [The Tanzil Project](https://tanzil.net)
 - [Made with Electron](https://www.electronjs.org/)
