@@ -9,12 +9,12 @@ OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app.
 
 ## Features
 
-
 - Al-Qur'an
 - Sura List
 - Translation
 	- English
 	- Indonesia
+- Zooming
 
 ## Installation
 
@@ -28,7 +28,7 @@ OpenQuran is an online & offline (for Windows) Al-Qur'an Reader website & app.
 2. Navigate to OpenQuran
 3. Install dependencies using `npm install`
 4. To preview your electron app, run `npm start`
-5. To build your electron app, run `npm run start`
+5. To build your electron app, run `npm run make`
 
 ### Add to Homescreen (Browser)
 1. Open OpenQuran's website [here](https://altaf-creator.github.io/OpenQuran/)

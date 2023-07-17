@@ -21,6 +21,7 @@
     <script src="scripts/window-buttons.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <script src="scripts/service-worker.js" defer></script>
+    <script src="scripts/zoom.js" defer></script>
 
     <div class="navbar">
         <a href="./" style="text-decoration: none;" id="openquran-link">
@@ -69,6 +70,11 @@
                             onclick="changeDropdownName(`dropdown-content`, `Indonesia`); changeLang(1);">Indonesia</a>
                     </div>
                 </div>
+                <div class="zoom">
+                    <a href="javascript:void(0)" onclick="zoomOut(); updateZoom();" class="zoom-btn"><i class="fa-solid fa-minus"></i></a>
+                    <span id="zoomText">100%</span>
+                    <a href="javascript:void(0)" onclick="zoomIn(); updateZoom();" class="zoom-btn"><i class="fa-solid fa-plus"></i></a>
+                </div>
                 <hr style="margin: 10px">
                 <div id="sidebar-sura">
 
@@ -93,6 +99,12 @@
                             onclick="changeDropdownName(`dropdown-content-alternate`, `Indonesia`); changeLang(1);">Indonesia</a>
                     </div>
                 </div>
+                <div class="zoom" id="zoom-alternate">
+                    <a href="javascript:void(0)" onclick="zoomOut(); updateZoom();" class="zoom-btn"><i class="fa-solid fa-minus"></i></a>
+                    <span id="zoomTextAlt">100%</span>
+                    <a href="javascript:void(0)" onclick="zoomIn(); updateZoom();" class="zoom-btn"><i class="fa-solid fa-plus"></i></a>
+                </div>
+                <hr id="mobile-hr">
                 <h1 id="header" class="title">Loading...</h1>
                 <h3 id="subheader" class="subtitle"></h3>
                 <div id="main">

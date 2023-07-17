@@ -78,7 +78,7 @@ function loadSura(xml, translationIndex, index) {
 
     var children = sura[suraIndex].children;
 
-    txt += "<ol>"
+    txt += "<ol id=\"sura-ol\">"
     for (var i = 0; i < children.length; i++) {
         txt += `<li class="sura-li">${children[i].getAttribute('text')}</li>
         <p id="t-${i}"></p>
@@ -88,8 +88,7 @@ function loadSura(xml, translationIndex, index) {
 
     loadTranslation(index, translationIndex);
 
-    document.getElementById("header").innerHTML = metadata[3] +
-        " - <b>" + sura[suraIndex].getAttribute('name') + "</b>";
+    document.getElementById("header").innerHTML = metadata[0] + ": " + metadata[3] + " - <b>" + sura[suraIndex].getAttribute('name') + "</b>";
     document.getElementById("navbar-text").innerHTML = metadata[3] +
         " - <b>" + sura[suraIndex].getAttribute('name') + "</b>";
     document.getElementById("subheader").innerHTML = metadata[1] + " Aya <br>" + metadata[4];
@@ -169,7 +168,7 @@ function loadMetadataButtons(xml) {
         var index = sura[i].getAttribute('index');
         var tname = sura[i].getAttribute('tname');
 
-        document.getElementById("sidebar-sura").innerHTML += `<a class="side-buttons" href="#" onclick="load(${index}, ${tIndex})"><i class="fa-solid fa-book-quran"></i> ${tname}</a>`;
+        document.getElementById("sidebar-sura").innerHTML += `<a class="side-buttons" href="#" onclick="load(${index}, ${tIndex}); updateZoom()"><i class="fa-solid fa-book-quran"></i> ${index}: ${tname}</a>`;
     }
 }
 
@@ -200,4 +199,6 @@ function loadTranslationAya(xml, index, aya) {
         txt = children[i].getAttribute("text");
         document.getElementById(`t-${i}`).innerHTML = txt;
     }
+
+    updateZoom();
 }

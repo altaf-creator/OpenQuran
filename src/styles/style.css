@@ -420,7 +420,51 @@ hr {
     text-decoration: none;
 }
 
+.zoom {
+    box-sizing: border-box;
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zoom-btn {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    color: black;
+    background-color: rgb(0, 0, 0, 0);
+    border-radius: 7px;
+    text-align: center;
+    transition: all 150ms;
+}
+
+.zoom-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.zoom-btn:active {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.zoom-btn:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 #dropdown-alternate {
+    display: none;
+}
+
+#zoom-alternate {
+    display: none;
+}
+
+#mobile-hr {
     display: none;
 }
 
@@ -438,6 +482,10 @@ hr {
         display: block;
     }
 
+    #mobile-hr {
+        display: block;
+    }
+
     #navbar-text {
         display: none;
     }
@@ -452,5 +500,9 @@ hr {
 
     .main-sidebar {
         display: none;
+    }
+
+    #zoom-alternate {
+        display: flex;
     }
 }
